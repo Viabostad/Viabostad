@@ -1,4 +1,4 @@
-export default function Home() {
+import Link from "next/link";export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <header className="border-b border-gray-200">
@@ -6,28 +6,34 @@ export default function Home() {
           <div className="text-xl font-bold">Viabostad</div>
 
           <nav className="hidden gap-6 md:flex">
-            <a href="#" className="text-sm text-gray-700 hover:text-black">
-              Bostäder
-            </a>
-            <a href="#" className="text-sm text-gray-700 hover:text-black">
-              För mäklare
-            </a>
-            <a href="#" className="text-sm text-gray-700 hover:text-black">
-              Om oss
-            </a>
-            <a href="#" className="text-sm text-gray-700 hover:text-black">
-              Kontakt
-            </a>
-          </nav>
+  <Link href="/bostader" className="text-sm text-gray-700 hover:text-black">
+    Bostäder
+  </Link>
+  <Link href="/for-maklare" className="text-sm text-gray-700 hover:text-black">
+    För mäklare
+  </Link>
+  <Link href="/om-oss" className="text-sm text-gray-700 hover:text-black">
+    Om oss
+  </Link>
+  <Link href="/kontakt" className="text-sm text-gray-700 hover:text-black">
+    Kontakt
+  </Link>
+</nav>
 
           <div className="flex gap-3">
-            <button className="rounded-xl border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50">
-              Logga in
-            </button>
-            <button className="rounded-xl bg-black px-4 py-2 text-sm text-white hover:opacity-90">
-              Annonsera bostad
-            </button>
-          </div>
+  <Link
+    href="/kontakt"
+    className="rounded-xl border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50"
+  >
+    Logga in
+  </Link>
+  <Link
+    href="/bostader"
+    className="rounded-xl bg-black px-4 py-2 text-sm text-white hover:opacity-90"
+  >
+    Annonsera bostad
+  </Link>
+</div>
         </div>
       </header>
 
